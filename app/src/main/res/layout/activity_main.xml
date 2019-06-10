@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <org.opencv.android.JavaCameraView
+            android:id="@+id/camera_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true" />
+
+        <com.zk.android.emotioncamera.CircleImageView
+            android:id="@+id/ai"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/camera_view"
+            android:layout_marginBottom="-45dp"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-110dp"
+            android:layout_below="@+id/camera_view"
+            android:layout_centerHorizontal="true">
+
+            <com.zk.android.emotioncamera.CircleImageView
+                android:id="@+id/albumView"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:background="@color/colorBlack"
+                android:src="@drawable/gray"
+                android:layout_toLeftOf="@+id/take_btn"
+                android:layout_marginRight="70dp"
+                android:layout_centerVertical="true"/>
+
+            <com.zk.android.emotioncamera.CircleButton
+                android:id="@+id/take_btn"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_centerInParent="true" />
+
+            <com.zk.android.emotioncamera.CircleImageView
+                android:id="@+id/switch_camera"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="70dp"
+                android:layout_toRightOf="@+id/take_btn"
+                android:background="@color/colorBlack"
+                android:src="@drawable/camera_switch" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

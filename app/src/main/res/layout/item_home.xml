@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="0dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:id="@+id/linear"
+        android:layout_marginBottom="5dp">
+
+        <ImageView
+            android:id="@+id/masonry_item_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="-30dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@android:string/VideoView_error_button"
+            android:scaleType="centerCrop" />
+
+        <com.zk.android.emotioncamera.CircleImageView
+            android:id="@+id/masonry_item_delBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="-30dp"
+            android:src="@drawable/img_del"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/masonry_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"/>
+
+</RelativeLayout>
